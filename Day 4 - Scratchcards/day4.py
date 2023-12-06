@@ -23,7 +23,6 @@ with open(os.path.dirname(__file__)+"/data4.txt") as f:
 
     #Part 2
     cards=[1 for line in lines]
-    #for card in matches:
     i=0
     while i<len(cards):
         for card in range(cards[i]):
