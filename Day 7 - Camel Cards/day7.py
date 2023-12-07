@@ -55,7 +55,6 @@ with open(os.path.dirname(__file__)+"/data7.txt") as f:
         if J_number>0:
             if counter!=Counter(["J"]*5):
                 counter.pop("J")
-                print(counter)
                 max_n=max(counter, key=counter.get)
                 counter[max_n]+=J_number
                 counter["J"]=0
@@ -88,9 +87,6 @@ with open(os.path.dirname(__file__)+"/data7.txt") as f:
     ranks=[hand for row in ranks_per_reward for hand in row]
     prize=0
     for idx, hand in enumerate(ranks):
-        if hand[0]==["J"]*5:
-            print(idx)
-        print(hand[0],hand[1])
         prize+=(len(lines)-idx)*hand[1]
 
     print(prize)
